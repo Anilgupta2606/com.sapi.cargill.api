@@ -2,7 +2,7 @@
 Feature: Title of your feature
   I want to use this template for my feature file
 
-  Scenario Outline: Test the API
+  Scenario Outline: Test the API "<URL">
     Given Hit the url "<URL>"
     When store the response tag value "<responseTag>"
     Then check the "<responseTag>" value
