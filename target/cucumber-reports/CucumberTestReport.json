@@ -1,0 +1,413 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 12,
+        "name": "Test the API \"\u003cURL\"\u003e",
+        "description": "",
+        "id": "title-of-your-feature;test-the-api-\"\u003curl\"\u003e;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17846750174,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Hit the url \"https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/futureOffering?commodityCode\u003d12\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/futureOffering?commodityCode\u003d12",
+                  "offset": 13
+                }
+              ],
+              "location": "API_StepDef.hit_the_url(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2046907,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "store the response tag value \"data\u003eoffering\u003ecode,data\u003eoffering\u003eendDate,data\u003eoffering\u003efuturesMonth,data\u003eoffering\u003efuturesYear,data\u003eoffering\u003estartDate,data\u003eoffering\u003ethirdPartyId\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003eoffering\u003ecode,data\u003eoffering\u003eendDate,data\u003eoffering\u003efuturesMonth,data\u003eoffering\u003efuturesYear,data\u003eoffering\u003estartDate,data\u003eoffering\u003ethirdPartyId",
+                  "offset": 30
+                }
+              ],
+              "location": "API_StepDef.store_the_response_tag_value(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2251343,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check the \"data\u003eoffering\u003ecode,data\u003eoffering\u003eendDate,data\u003eoffering\u003efuturesMonth,data\u003eoffering\u003efuturesYear,data\u003eoffering\u003estartDate,data\u003eoffering\u003ethirdPartyId\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003eoffering\u003ecode,data\u003eoffering\u003eendDate,data\u003eoffering\u003efuturesMonth,data\u003eoffering\u003efuturesYear,data\u003eoffering\u003estartDate,data\u003eoffering\u003ethirdPartyId",
+                  "offset": 11
+                }
+              ],
+              "location": "API_StepDef.check_the_value_with_the_test_data(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@tag"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Test the API \"\u003cURL\"\u003e",
+        "description": "",
+        "id": "title-of-your-feature;test-the-api-\"\u003curl\"\u003e;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2877602891,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Hit the url \"https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/deliveryLocationsWithBids\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/deliveryLocationsWithBids",
+                  "offset": 13
+                }
+              ],
+              "location": "API_StepDef.hit_the_url(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3627450,
+              "error_message": "java.lang.AssertionError: tag is not present data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city null\n\tat org.testng.Assert.fail(Assert.java:96)\n\tat utils.JsonReader.storeMultileDatainJon_MultipleArray_MultipleNormal(JsonReader.java:335)\n\tat utils.JsonReader.jsonReaderResponse(JsonReader.java:44)\n\tat stepdefs.API_StepDef.store_the_response_tag_value(API_StepDef.java:39)\n\tat ✽.When store the response tag value \"data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.description,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.locationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.state,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.thirdPartyLocationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.basis,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.flatPrice,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.futures,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.marketQuotePriceId,data\u003edelLocBidGroup\u003eendDate,data\u003edelLocBidGroup\u003egroupLabel,data\u003edelLocBidGroup\u003estartDate\"(API.feature:7)\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "store the response tag value \"data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.description,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.locationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.state,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.thirdPartyLocationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.basis,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.flatPrice,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.futures,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.marketQuotePriceId,data\u003edelLocBidGroup\u003eendDate,data\u003edelLocBidGroup\u003egroupLabel,data\u003edelLocBidGroup\u003estartDate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.description,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.locationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.state,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.thirdPartyLocationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.basis,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.flatPrice,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.futures,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.marketQuotePriceId,data\u003edelLocBidGroup\u003eendDate,data\u003edelLocBidGroup\u003egroupLabel,data\u003edelLocBidGroup\u003estartDate",
+                  "offset": 30
+                }
+              ],
+              "location": "API_StepDef.store_the_response_tag_value(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "check the \"data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.description,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.locationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.state,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.thirdPartyLocationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.basis,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.flatPrice,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.futures,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.marketQuotePriceId,data\u003edelLocBidGroup\u003eendDate,data\u003edelLocBidGroup\u003egroupLabel,data\u003edelLocBidGroup\u003estartDate\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.city,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.description,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.locationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.state,data\u003edelLocBidGroup\u003e\u003edelLocBid..deliveryLocation.thirdPartyLocationId,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.basis,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.flatPrice,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.futures,data\u003edelLocBidGroup\u003e\u003edelLocBid..pricing.marketQuotePriceId,data\u003edelLocBidGroup\u003eendDate,data\u003edelLocBidGroup\u003egroupLabel,data\u003edelLocBidGroup\u003estartDate",
+                  "offset": 11
+                }
+              ],
+              "location": "API_StepDef.check_the_value_with_the_test_data(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@tag"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Test the API \"\u003cURL\"\u003e",
+        "description": "",
+        "id": "title-of-your-feature;test-the-api-\"\u003curl\"\u003e;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1335743572,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Hit the url \"https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/cakRefPoint?locationName\u003d1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/cakRefPoint?locationName\u003d1",
+                  "offset": 13
+                }
+              ],
+              "location": "API_StepDef.hit_the_url(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 220831,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "store the response tag value \"data\u003elocations\u003ecity,data\u003elocations\u003estate,data\u003elocations\u003ethirdPartyLocationId\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003elocations\u003ecity,data\u003elocations\u003estate,data\u003elocations\u003ethirdPartyLocationId",
+                  "offset": 30
+                }
+              ],
+              "location": "API_StepDef.store_the_response_tag_value(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 70133,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check the \"data\u003elocations\u003ecity,data\u003elocations\u003estate,data\u003elocations\u003ethirdPartyLocationId\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003elocations\u003ecity,data\u003elocations\u003estate,data\u003elocations\u003ethirdPartyLocationId",
+                  "offset": 11
+                }
+              ],
+              "location": "API_StepDef.check_the_value_with_the_test_data(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@tag"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Test the API \"\u003cURL\"\u003e",
+        "description": "",
+        "id": "title-of-your-feature;test-the-api-\"\u003curl\"\u003e;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1163355134,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Hit the url \"https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/contractPricing?userId\u003d1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/contract/contractPricing?userId\u003d1",
+                  "offset": 13
+                }
+              ],
+              "location": "API_StepDef.hit_the_url(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2614700,
+              "error_message": "java.lang.AssertionError: tag is not present data.pricing.marketQuotePriceId null\n\tat org.testng.Assert.fail(Assert.java:96)\n\tat utils.JsonReader.storeJONResponse(JsonReader.java:93)\n\tat utils.JsonReader.jsonReaderResponse(JsonReader.java:59)\n\tat stepdefs.API_StepDef.store_the_response_tag_value(API_StepDef.java:39)\n\tat ✽.When store the response tag value \"data.pricing.basis,data.pricing.flatPrice,data.pricing.futures,data.pricing.marketQuotePriceId\"(API.feature:7)\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "store the response tag value \"data.pricing.basis,data.pricing.flatPrice,data.pricing.futures,data.pricing.marketQuotePriceId\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data.pricing.basis,data.pricing.flatPrice,data.pricing.futures,data.pricing.marketQuotePriceId",
+                  "offset": 30
+                }
+              ],
+              "location": "API_StepDef.store_the_response_tag_value(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "check the \"data.pricing.basis,data.pricing.flatPrice,data.pricing.futures,data.pricing.marketQuotePriceId\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data.pricing.basis,data.pricing.flatPrice,data.pricing.futures,data.pricing.marketQuotePriceId",
+                  "offset": 11
+                }
+              ],
+              "location": "API_StepDef.check_the_value_with_the_test_data(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@tag"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Test the API \"\u003cURL\"\u003e",
+        "description": "",
+        "id": "title-of-your-feature;test-the-api-\"\u003curl\"\u003e;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1330106223,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Hit the url \"https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/customer/searchSeller?userId\u003d2\u0026searchTerm\u003d12\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api-dev.dev.dev-cglcloud.com/api/dxo/cascna/v1/customer/searchSeller?userId\u003d2\u0026searchTerm\u003d12",
+                  "offset": 13
+                }
+              ],
+              "location": "API_StepDef.hit_the_url(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 409980,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "store the response tag value \"data\u003eseller\u003eid,data\u003eseller\u003ename,data\u003eseller..address.city,data\u003eseller..address.state\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003eseller\u003eid,data\u003eseller\u003ename,data\u003eseller..address.city,data\u003eseller..address.state",
+                  "offset": 30
+                }
+              ],
+              "location": "API_StepDef.store_the_response_tag_value(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56982,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check the \"data\u003eseller\u003eid,data\u003eseller\u003ename,data\u003eseller..address.city,data\u003eseller..address.state\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data\u003eseller\u003eid,data\u003eseller\u003ename,data\u003eseller..address.city,data\u003eseller..address.state",
+                  "offset": 11
+                }
+              ],
+              "location": "API_StepDef.check_the_value_with_the_test_data(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@tag"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "API.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@tag"
+      }
+    ]
+  }
+]

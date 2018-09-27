@@ -1,0 +1,10 @@
+{
+	"data": {
+		"pricing": {
+			"basis": -0.25,
+			"flatPrice": 4.0,
+			"futures": 4.0,
+			"marketQuotePriceId": null
+		}
+	}
+}
