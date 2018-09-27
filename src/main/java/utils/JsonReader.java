@@ -304,20 +304,11 @@ public class JsonReader {
 		String tag1[] = tags.split("\\.\\.");
 		String tag2[] = tag1[0].split(">>");
 		String tag[] = tag2[0].split(">");
-		int i = 1, len = tag.length;
+		int len = tag.length;
 		try {
 			jobj = (JSONObject) jobj.get(tag[0]);
 
-			while (len > 1) {
-				if (i == 1)
-					jsonarr_1 = (JSONArray) jobj.get(tag[i]);
-				else
-					jsonarr_1 = (JSONArray) jsonobj_1.get(tag[i]);
-
-				jsonobj_1 = (JSONObject) jsonarr_1.get(0);
-				len--;
-				i++;
-			}
+			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag1,1);
 			int s = 0;
 
 			for (int z = 0; z < jsonarr_1.size(); z++) {
@@ -350,20 +341,12 @@ public class JsonReader {
 		JSONArray jsonarr_1 = null;
 		String tag1[] = tags.split("\\.\\.");
 		String tag[] = tag1[0].split(">");
-		int i = 1, len = tag.length;
+		int len = tag.length;
 		try {
 			jobj = (JSONObject) jobj.get(tag[0]);
 
-			while (len > 1) {
-				if (i == 1)
-					jsonarr_1 = (JSONArray) jobj.get(tag[i]);
-				else
-					jsonarr_1 = (JSONArray) jsonobj_1.get(tag[i]);
-
-				jsonobj_1 = (JSONObject) jsonarr_1.get(0);
-				len--;
-				i++;
-			}
+			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag,1);
+			
 			String tag2[] = tag1[1].split("\\.");
 			int s = 0;
 			for (int j = 0; j < jsonarr_1.size(); j++) {
@@ -382,5 +365,21 @@ public class JsonReader {
 		} catch (Exception e) {
 			Assert.fail("tag is not present " + tags + " " + e.getMessage());
 		}
+	}
+	
+	public JSONArray parseArrayJon(JSONObject jobj,int len, JSONArray jsonarr_1,JSONObject jsonobj_1,String[]tag1,int ifval)
+	{
+		int i=1;
+		while (len > 1) {
+			if (i == ifval)
+				jsonarr_1 = (JSONArray) jobj.get(tag1[i]);
+			else
+				jsonarr_1 = (JSONArray) jsonobj_1.get(tag1[i]);
+
+			jsonobj_1 = (JSONObject) jsonarr_1.get(0);
+			len--;
+			i++;
+		}
+		return jsonarr_1;
 	}
 }
