@@ -1,10 +1,274 @@
 {
 	"data": {
-		"pricing": {
-			"basis": -0.25,
-			"flatPrice": 4.0,
-			"futures": 4.0,
-			"marketQuotePriceId": null
-		}
+		"delLocBidGroup": [
+			{
+				"delLocBid": [
+					{
+						"deliveryLocation": {
+							"city": "Council Bluffs, CAH",
+							"description": "Council Bluffs",
+							"locationId": "123",
+							"state": "CAH",
+							"thirdPartyLocationId": "12"
+						},
+						"pricing": {
+							"basis": -0.01,
+							"flatPrice": 12.0,
+							"futures": 12.01,
+							"marketQuotePriceId": "900"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Blair, SSNA",
+							"description": "Blair",
+							"locationId": "124",
+							"state": "SSNA",
+							"thirdPartyLocationId": "13"
+						},
+						"pricing": {
+							"basis": -0.26,
+							"flatPrice": 10.067,
+							"futures": 10.32,
+							"marketQuotePriceId": "999"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Hamburg, CAH",
+							"description": "Hamburg",
+							"locationId": "125",
+							"state": "CAH",
+							"thirdPartyLocationId": "14"
+						},
+						"pricing": {
+							"basis": -0.32,
+							"flatPrice": 12.0,
+							"futures": 12.32,
+							"marketQuotePriceId": "997"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Albion, CAH",
+							"description": "Albion",
+							"locationId": "126",
+							"state": "CAH",
+							"thirdPartyLocationId": "15"
+						},
+						"pricing": {
+							"basis": -0.3,
+							"flatPrice": 10.22,
+							"futures": 10.52,
+							"marketQuotePriceId": "898"
+						}
+					}
+				],
+				"endDate": "09/31/2018",
+				"groupLabel": "Full Month",
+				"startDate": "09/01/2018"
+			},
+			{
+				"delLocBid": [
+					{
+						"deliveryLocation": {
+							"city": "Council Bluffs, CAH",
+							"description": "Council Bluffs",
+							"locationId": "123",
+							"state": "CAH",
+							"thirdPartyLocationId": "12"
+						},
+						"pricing": {
+							"basis": -0.01,
+							"flatPrice": 12.0,
+							"futures": 12.01,
+							"marketQuotePriceId": "900"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Blair, SSNA",
+							"description": "Blair",
+							"locationId": "124",
+							"state": "SSNA",
+							"thirdPartyLocationId": "13"
+						},
+						"pricing": {
+							"basis": -0.26,
+							"flatPrice": 10.067,
+							"futures": 10.32,
+							"marketQuotePriceId": "999"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Hamburg, CAH",
+							"description": "Hamburg",
+							"locationId": "125",
+							"state": "CAH",
+							"thirdPartyLocationId": "14"
+						},
+						"pricing": {
+							"basis": -0.32,
+							"flatPrice": 12.0,
+							"futures": 12.32,
+							"marketQuotePriceId": "997"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Albion, CAH",
+							"description": "Albion",
+							"locationId": "126",
+							"state": "CAH",
+							"thirdPartyLocationId": "15"
+						},
+						"pricing": {
+							"basis": -0.3,
+							"flatPrice": 10.22,
+							"futures": 10.52,
+							"marketQuotePriceId": "898"
+						}
+					}
+				],
+				"endDate": "09/15/2018",
+				"groupLabel": "First Half",
+				"startDate": "09/01/2018"
+			},
+			{
+				"delLocBid": [
+					{
+						"deliveryLocation": {
+							"city": "Council Bluffs, CAH",
+							"description": "Council Bluffs",
+							"locationId": "123",
+							"state": "CAH",
+							"thirdPartyLocationId": "12"
+						},
+						"pricing": {
+							"basis": -0.01,
+							"flatPrice": 12.0,
+							"futures": 12.01,
+							"marketQuotePriceId": "900"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Blair, SSNA",
+							"description": "Blair",
+							"locationId": "124",
+							"state": "SSNA",
+							"thirdPartyLocationId": "13"
+						},
+						"pricing": {
+							"basis": -0.26,
+							"flatPrice": 10.067,
+							"futures": 10.32,
+							"marketQuotePriceId": "999"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Hamburg, CAH",
+							"description": "Hamburg",
+							"locationId": "125",
+							"state": "CAH",
+							"thirdPartyLocationId": "14"
+						},
+						"pricing": {
+							"basis": -0.32,
+							"flatPrice": 12.0,
+							"futures": 12.32,
+							"marketQuotePriceId": "997"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Albion, CAH",
+							"description": "Albion",
+							"locationId": "126",
+							"state": "CAH",
+							"thirdPartyLocationId": "15"
+						},
+						"pricing": {
+							"basis": -0.3,
+							"flatPrice": 10.22,
+							"futures": 10.52,
+							"marketQuotePriceId": "898"
+						}
+					}
+				],
+				"endDate": "09/30/2018",
+				"groupLabel": "Last Half",
+				"startDate": "09/16/2018"
+			},
+			{
+				"delLocBid": [
+					{
+						"deliveryLocation": {
+							"city": "Council Bluffs, CAH",
+							"description": "Council Bluffs",
+							"locationId": "123",
+							"state": "CAH",
+							"thirdPartyLocationId": "12"
+						},
+						"pricing": {
+							"basis": -0.01,
+							"flatPrice": 12.0,
+							"futures": 12.01,
+							"marketQuotePriceId": "900"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Blair, SSNA",
+							"description": "Blair",
+							"locationId": "124",
+							"state": "SSNA",
+							"thirdPartyLocationId": "13"
+						},
+						"pricing": {
+							"basis": -0.26,
+							"flatPrice": 10.067,
+							"futures": 10.32,
+							"marketQuotePriceId": "999"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Hamburg, CAH",
+							"description": "Hamburg",
+							"locationId": "125",
+							"state": "CAH",
+							"thirdPartyLocationId": "14"
+						},
+						"pricing": {
+							"basis": -0.32,
+							"flatPrice": 12.0,
+							"futures": 12.32,
+							"marketQuotePriceId": "997"
+						}
+					},
+					{
+						"deliveryLocation": {
+							"city": "Albion, CAH",
+							"description": "Albion",
+							"locationId": "126",
+							"state": "CAH",
+							"thirdPartyLocationId": "15"
+						},
+						"pricing": {
+							"basis": -0.3,
+							"flatPrice": 10.22,
+							"futures": 10.52,
+							"marketQuotePriceId": "898"
+						}
+					}
+				],
+				"endDate": "10/30/2018",
+				"groupLabel": "Full Month",
+				"startDate": "10/01/2018"
+			}
+		]
 	}
 }

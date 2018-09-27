@@ -308,7 +308,7 @@ public class JsonReader {
 		try {
 			jobj = (JSONObject) jobj.get(tag[0]);
 
-			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag1,1);
+			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag,1);
 			int s = 0;
 
 			for (int z = 0; z < jsonarr_1.size(); z++) {
