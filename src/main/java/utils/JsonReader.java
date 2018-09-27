@@ -1,12 +1,9 @@
 package utils;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.lang.ArrayUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -44,7 +41,7 @@ public class JsonReader {
 			accessToken = (String) jobj.get(tags);
 		} else {
 			if (tags.contains("..") && tags.contains(">>")) {
-				storeMultileDatainJon_MultipleArray(tags, jobj);
+				storeMultileDatainJon_MultipleArray_MultipleNormal(tags, jobj);
 			} else {
 				if (tags.contains(".") && tags.contains(">")) {
 					if (tags.indexOf(".") < tags.indexOf(">"))
@@ -52,7 +49,7 @@ public class JsonReader {
 
 					else {
 						if (tags.contains("..")) {
-							storeMultipleDataInJon(tags, jobj);
+							storeMultipleDataInJon_MultpleNormalJon(tags, jobj);
 						} else
 							storeJonData_ArrayToNormal(tags, jobj);
 					}
@@ -299,7 +296,7 @@ public class JsonReader {
 		}
 	}
 
-	public void storeMultileDatainJon_MultipleArray(String tags, JSONObject jobj) {
+	public void storeMultileDatainJon_MultipleArray_MultipleNormal(String tags, JSONObject jobj) {
 
 		JSONObject jsonobj_1 = null;
 		JSONArray jsonarr_1 = null;
@@ -348,7 +345,7 @@ public class JsonReader {
 		}
 	}
 
-	public void storeMultipleDataInJon(String tags, JSONObject jobj) {
+	public void storeMultipleDataInJon_MultpleNormalJon(String tags, JSONObject jobj) {
 		JSONObject jsonobj_1 = null;
 		JSONArray jsonarr_1 = null;
 		String tag1[] = tags.split("\\.\\.");
