@@ -9,11 +9,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class JsonReader {
 
 	public Map<String, String> response = new HashMap<String, String>();
 	static String accessToken = null;
+	public SoftAssert softAssertion = new SoftAssert();
 
 	/**
 	 * Function to retrieve the data from the JSON response
@@ -79,18 +81,23 @@ public class JsonReader {
 	 * @param jobj
 	 */
 	public void storeJONResponse(String tags, JSONObject jobj) {
+		String tag[] = tags.split("\\.");
+		int len = tag.length;
+		int k = 0;
 		try {
-			String tag[] = tags.split("\\.");
-			int len = tag.length;
-			int k = 0;
+	
 			while (len > 1) {
 				jobj = (JSONObject) jobj.get(tag[k]);
 				k++;
 				len--;
 			}
 			response.put(tag[k], jobj.get(tag[k]).toString());
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tag[k] + " is null: " + ex.getMessage());
+		}	
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -103,9 +110,11 @@ public class JsonReader {
 	public void storeJonArrayResponse(String tags, JSONObject jobj) {
 		JSONObject jsonobj_1 = null;
 		JSONArray jsonarr_1 = null;
-		try {
+		
 			String tag[] = tags.split(">");
+			
 			int i = 1, len = tag.length;
+			try {
 			jobj = (JSONObject) jobj.get(tag[0]);
 
 			while (len > 2) {
@@ -123,8 +132,13 @@ public class JsonReader {
 				jsonobj_1 = (JSONObject) jsonarr_1.get(j);
 				response.put(tag[i] + j, jsonobj_1.get(tag[i]).toString());
 			}
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} 
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tag[i] + " is null: " + ex.getMessage());
+		}
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -179,8 +193,13 @@ public class JsonReader {
 				jsonobj_1 = (JSONObject) jsonarr_1.get(j);
 				response.put(tag2[i] + j, jsonobj_1.get(tag2[i]).toString());
 			}
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} 
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tags + " is null: " + ex.getMessage());
+		}
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -235,8 +254,13 @@ public class JsonReader {
 				len--;
 			}
 			response.put(tag2[i], jsonobj_1.get(tag2[i]).toString());
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		}
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tags + " is null: " + ex.getMessage());
+		}
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -291,8 +315,13 @@ public class JsonReader {
 					response.put(tag2[a] + j, jsonobj_1.get(tag2[a]).toString());
 				}
 			}
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} 
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tags + " is null: " + ex.getMessage());
+		}
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -327,12 +356,19 @@ public class JsonReader {
 						s++;
 						len--;
 					}
+					
 					response.put(tag3[a] + s, jobj.get(tag3[a]).toString());
+					
 
 				}
 			}
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} 
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tags + " is null: " + ex.getMessage());
+		}
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 
@@ -342,17 +378,18 @@ public class JsonReader {
 		String tag1[] = tags.split("\\.\\.");
 		String tag[] = tag1[0].split(">");
 		int len = tag.length;
-		try {
+		int k = 0;
 			jobj = (JSONObject) jobj.get(tag[0]);
 
 			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag,1);
 			
 			String tag2[] = tag1[1].split("\\.");
+			try {
 			int s = 0;
 			for (int j = 0; j < jsonarr_1.size(); j++) {
 				jsonobj_1 = (JSONObject) jsonarr_1.get(j);
 				len = tag2.length;
-				int k = 0;
+				
 				while (len > 1) {
 					jobj = (JSONObject) jsonobj_1.get(tag2[k]);
 					k++;
@@ -362,8 +399,14 @@ public class JsonReader {
 				response.put(tag2[k] + s, jobj.get(tag2[k]).toString());
 
 			}
-		} catch (Exception e) {
-			Assert.fail("tag is not present " + tags + " " + e.getMessage());
+		} 
+		catch(NullPointerException ex)
+		{
+			softAssertion.fail("Value of tag " + tag2[k] + " is null: " + ex.getMessage());
+		}
+		
+		catch (Exception e) {
+			softAssertion.fail("tag is not present " + tags + " " + e.getMessage());
 		}
 	}
 	

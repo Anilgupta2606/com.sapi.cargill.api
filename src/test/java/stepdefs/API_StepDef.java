@@ -37,6 +37,8 @@ public class API_StepDef {
 
 			for (int i = 0; i < tagToCheck.length; i++)
 				readerResponse.jsonReaderResponse(tagToCheck[i], res);
+			
+			readerResponse.softAssertion.assertAll();
 		} 
 		
 
