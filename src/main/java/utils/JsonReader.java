@@ -378,7 +378,6 @@ public class JsonReader {
 		String tag1[] = tags.split("\\.\\.");
 		String tag[] = tag1[0].split(">");
 		int len = tag.length;
-		int k = 0;
 			jobj = (JSONObject) jobj.get(tag[0]);
 
 			jsonarr_1= parseArrayJon(jobj, len, jsonarr_1, jsonobj_1, tag,1);
@@ -389,7 +388,7 @@ public class JsonReader {
 			for (int j = 0; j < jsonarr_1.size(); j++) {
 				jsonobj_1 = (JSONObject) jsonarr_1.get(j);
 				len = tag2.length;
-				
+				int k = 0;
 				while (len > 1) {
 					jobj = (JSONObject) jsonobj_1.get(tag2[k]);
 					k++;
@@ -402,7 +401,7 @@ public class JsonReader {
 		} 
 		catch(NullPointerException ex)
 		{
-			softAssertion.fail("Value of tag " + tag2[k] + " is null: " + ex.getMessage());
+			softAssertion.fail("Value of tag " + tags + " is null: " + ex.getMessage());
 		}
 		
 		catch (Exception e) {
